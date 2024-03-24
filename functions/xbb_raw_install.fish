@@ -14,28 +14,25 @@ function xbb_raw_install
     return 1
   end
 
-  if test ! -e "$package_name"
-    echo "ERROR: Package is not installable"
-    return 1
-  end
-
   echo "Installing $package_name"
+
+  if test -e "$package_name/preconditions-$S_OSNAME-$S_PLATFORM"
+    eval "$shell_path $package_name/preconditions-$S_OSNAME-$S_PLATFORM"
+  end
 
   if test -e "$package_name/preconditions"
     eval "$shell_path $package_name/preconditions"
   end
 
-  if test -e "$package_name/prerequisites-$S_OSNAME-$S_PLATFORM"
-    eval "$shell_path $package_name/prerequisites-$S_OSNAME-$S_PLATFORM"
+  if test -e "$package_name/install"
+    eval "$shell_path $package_name/install"
   end
-
-  if test -e "$package_name/prerequisites"
-    eval "$shell_path $package_name/prerequisites"
-  end
-
-  eval "$shell_path $package_name/install"
 
   if test -e "$package_name/postconditions"
     eval "$shell_path $package_name/postconditions"
+  end
+
+  if test -e "$package_name/postconditions-$S_OSNAME-$S_PLATFORM"
+    eval "$shell_path $package_name/postconditions-$S_OSNAME-$S_PLATFORM"
   end
 end

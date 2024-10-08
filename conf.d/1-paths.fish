@@ -3,14 +3,14 @@
 # are OS independant.
 
 if status is-login
-  # Add any standard paths. We use -g to ensure
-  # That the paths don't end up getting persisted
-  # in fish_variables
+    # Add any standard paths. We use -g to ensure
+    # That the paths don't end up getting persisted
+    # in fish_variables
 
-  fish_add_path -g ~/.local/bin
-  fish_add_path -g /usr/local/sbin
+    fish_add_path -g ~/.local/bin
+    fish_add_path -g /usr/local/sbin
 
-  if test -d /opt/homebrew/
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-  end
+    if test -d /opt/homebrew/
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    end
 end

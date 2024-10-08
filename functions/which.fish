@@ -1,3 +1,3 @@
 function which
-  command -v $argv
+    command -v $argv
 end

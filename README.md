@@ -1,7 +1,8 @@
 # Bouillabaisse 
 
-An opinionated [fishshell](https://fishshell.com) configuration for macOS 
-and Linux.
+## Summary
+
+An opinionated [fishshell](https://fishshell.com) configuration for macOS and Linux.
 
 Defines environment variables, paths, and functions that are used when
 installing the rest of my environment.
@@ -20,6 +21,7 @@ Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 fisher install aleddavies/bouillabaisse 
 ```
 
-# Licence
+## Licence
+
 [MIT](./LICENSE.MD)
 

@@ -1,3 +1,3 @@
-function xbb_sync_package_functions
+function xbb_raw_sync
     rsync -av "$argv[1]" "$argv[2]"
 end

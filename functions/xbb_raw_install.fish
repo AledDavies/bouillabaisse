@@ -23,12 +23,12 @@ function xbb_raw_install
 
     echo "📦️ Installing $package_name"
 
-    pkg_apply "$shell_path" "$package_name/preconditions-$S_OSNAME-$S_PLATFORM"
+    pkg_apply "$shell_path" "$package_name/preconditions-$XBB_PLATFORM"
     pkg_apply "$shell_path" "$package_name/preconditions"
-    pkg_apply "$shell_path" "$package_name/install-$S_OSNAME-$S_PLATFORM"
+    pkg_apply "$shell_path" "$package_name/install-$XBB_PLATFORM"
     pkg_apply "$shell_path" "$package_name/install"
-    pkg_apply "$shell_path" "$package_name/configure-$S_OSNAME-$S_PLATFORM"
+    pkg_apply "$shell_path" "$package_name/configure-$XBB_PLATFORM"
     pkg_apply "$shell_path" "$package_name/configure"
-    pkg_apply "$shell_path" "$package_name/postconditions-$S_OSNAME-$S_PLATFORM"
+    pkg_apply "$shell_path" "$package_name/postconditions-$XBB_PLATFORM"
     pkg_apply "$shell_path" "$package_name/postconditions"
 end
